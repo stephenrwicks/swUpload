@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <title>swUpload</title>
+    <script src="swUpload.js"></script>
+</head>
+
+<body>
+
+    <h1>sw-image-upload</h1>
+    <sw-image-upload maxuploads="5"></sw-image-upload>
+    <br />
+    <br />
+    <hr>
+    <br />
+    <br />
+    <p>Proof-of-concept project for a native <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements" target="_blank">Web Component</a>. This extends the input element with type="file".</p>
+    <p>It accepts only images and automatically shows a preview of the selected files (before they are uploaded to the server).</p>
+    <p>Double-clicking on an image preview displays it in a lightbox/modal.</p>
+    <p>Selecting an image and pressing Backspace or Delete will remove it. There is also a clear button.</p>
+    <p>The element uses an optional "maxuploads" attribute to prevent the user from uploading more than a given number of files.</p>
+    <p>Dynamically changing the maxuploads attribute (or maxUploads property) while the element is in use will also validate the number of files (and remove excess).</p>
+    <p>I tried to keep this as close to the native input as possible. Retrieving the element.files property returns a FileList.</p>
+    <p>Custom properties/methods for now:</p>
+    <ul>
+        <li>files - Returns FileList</li>
+        <li>maxUploads - Modify the max (0 or null for unlimited)</li>
+        <li>clear() - Remove all images</li>
+        <li>removeFile(index) - Remove image by index</li>
+    </ul>
+    <p>Once the script is loaded, the only code required to put this component on the page is:</p>
+    <p><code>&lt;sw-image-upload&gt;&lt;/sw-image-upload&gt;</code></p>
+    <p><code>document.createElement('sw-image-upload')</code> will also work.</p>
+
+
+
+
+
+
+
+</body>
